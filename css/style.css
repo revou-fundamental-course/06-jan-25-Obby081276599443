@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: lavender;
 }
 
 .logo-icon {
@@ -16,6 +17,13 @@
 
 nav {
   display: flex;
+}
+
+#home-page {
+  background-color: aqua;
+  font-style: italic;
+  font-family: system-ui;
+  text-align: center;
 }
 
 .left-rounded {
@@ -31,6 +39,7 @@ nav > a {
   padding: 8px;
   color: black;
   text-decoration: none;
+  border-color: brown;
 }
 
 .banner-image {
@@ -43,8 +52,30 @@ nav > a {
 .content {
   /* optional */
   height: 500px;
+  background: lightsteelblue;
+}
+
+#our-profile {
+  background-color: red;
+  text-align: center;
+}
+
+#portfolio {
+  background-color: yellow;
+  text-align: center;
+}
+
+#message-us {
+  background-color: green;
+  text-align: center;
 }
 
 footer {
   text-align: center;
+  background-color: darkblue;
+  color: white;
+}
+
+footer p {
+  display: inline;
 }
