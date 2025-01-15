@@ -17,10 +17,10 @@
 
       <!-- Navigation -->
       <nav>
-        <a href="#home-page" class="left-rounded">Home</a>
-        <a href="#our-profile">Our Profile</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#message-us" class="right-rounded">Message Us</a>
+        <a href="#home-page" class="left-rounded"><b>Beranda</b></a>
+        <a href="#our-profile" class="second-rounded"><b>Profil Kami</b></a>
+        <a href="#portfolio" class="third-rounded"><b>Portofolio</b></a>
+        <a href="#message-us" class="right-rounded"><b>Kirim Pesan</b></a>
       </nav>
     </header>
 
@@ -33,24 +33,38 @@
         <!-- Title -->
         <header id="home-page">
           <h1>
-            Hi
-            <span id="user-greeting">User</span>
-            ,Welcome to <span><b>PT. Absolute Victory</b></span>
+            Halo
+            <span id="user-greeting">Pengguna,</span>
+            Selamat datang di <span><b>PT. Absolute Victory</b></span>
           </h1>
           <p>
-            Absolute victory is not obtained from quick decisions, but from
-            "Right Decisions".If you choose to trust our company, then
-            "Congratulations" because you have made the "Right Decision".
+            Kemenangan mutlak bukan diperoleh dari keputusan cepat,tetapi dari
+            "Keputusan Tepat".Jika Anda memilih percaya kepada perusahaan
+            kami,maka "Selamat" karena Anda telah membuat keputusan yang tepat.
+          </p>
+          <p>
+            "Seribu masalah satu solusi",itulah motto perusahaan kami. Apapun
+            yang Anda butuhkan dalam bidang teknologi transportasi darat,kami
+            siap membantu. Jika ingin mendapatkan informasi lebih lanjut,atau
+            memiliki pertanyaan seputar produk dan layanan kami,silahkan hubungi
+            kami melalui form yang telah disediakan. Terima kasih atas
+            waktu,kesempatan dan kepercayaan yang telah Anda berikan kepada
+            kami,semoga hari Anda menyenangkan.
           </p>
         </header>
-        <div class="banner-image"></div>
+
+        <div class="banner-image banner-image-1"></div>
+        <div class="banner-image banner-image-2"></div>
+        <div class="banner-image banner-image-3"></div>
+        <div class="banner-image banner-image-4"></div>
+        <div class="banner-image banner-image-5"></div>
       </section>
 
       <!-- Our Profile -->
       <section>
         <!-- Title -->
         <header id="our-profile">
-          <h1>Our Profile</h1>
+          <h1>Profil Kami</h1>
         </header>
         <div class="content"></div>
       </section>
@@ -59,7 +73,7 @@
       <section>
         <!-- Title -->
         <header id="portfolio">
-          <h1>Portfolio</h1>
+          <h1>Portofolio</h1>
         </header>
         <div class="content"></div>
       </section>
@@ -68,9 +82,105 @@
       <section>
         <!-- Title -->
         <header id="message-us">
-          <h1>Message Us</h1>
+          <h1>Kirim Pesan</h1>
         </header>
-        <div class="content"></div>
+        <div class="content">
+          <form action="" method="post" autocomplete="off">
+            <div>
+              <label for="name-input"> Nama : </label>
+              <input
+                type="text"
+                name="name"
+                id="name-input"
+                placeholder="Nama Lengkap"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="email-input"> Email : </label>
+              <input
+                type="email"
+                name="email"
+                id="email-input"
+                placeholder="Email"
+              />
+            </div>
+
+            <div>
+              <label for="phone-input"> No.HP : </label>
+              <input
+                type="tel"
+                name="nohp"
+                id="phone-input"
+                placeholder="Nomor HP Aktif"
+              />
+            </div>
+
+            <div>
+              <label for="address-input"> Alamat : </label>
+              <input
+                type="text"
+                name="alamat"
+                id="address-input"
+                placeholder="Alamat"
+              />
+            </div>
+
+            <div>
+              <label for="age-input"> Umur : </label>
+              <input
+                type="number"
+                name="usia"
+                id="age-input"
+                placeholder="Usia"
+              />
+            </div>
+
+            <div>
+              <p>Jenis Kelamin :</p>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Laki-Laki</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Perempuan</label>
+            </div>
+
+            <div>
+              <label for="birthday-input"> Tanggal Lahir: </label>
+              <input
+                type="date"
+                name="tanggal"
+                id="birthday-input"
+                placeholder="Tanggal Hari Ini"
+              />
+            </div>
+
+            <div>
+              <label for="warna-input"> Warna : </label>
+              <input
+                type="color"
+                name="warna"
+                id="warna-input"
+                placeholder="Warna Favorit"
+              />
+            </div>
+
+            <div>
+              <label for="message-input"> Pesan : </label>
+              <textarea
+                name="pesan"
+                id="message-input"
+                placeholder="Masukkan Pesan Anda"
+              ></textarea>
+            </div>
+
+            <div>
+              <button type="button" id="submit-btn">Kirim</button>
+            </div>
+          </form>
+
+          <div id="result-form"></div>
+        </div>
       </section>
     </main>
 
@@ -80,5 +190,8 @@
     <footer>
       <p>&copy; My Company 2025 - All rights reserved</p>
     </footer>
+
+    <!-- Javascript -->
+    <script src="js\script.js"></script>
   </body>
 </html>
