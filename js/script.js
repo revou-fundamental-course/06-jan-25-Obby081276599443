@@ -46,31 +46,15 @@ function formValidation() {
 }
 document.getElementById("submit-btn").addEventListener("click", formValidation);
 
-let indexBanner = 0;
-
-changeBackground();
-
-function nextBanner() {
-  indexBanner += 1;
-  changeBackground();
-}
 console.log("logo-icon");
 
-// Function to change background banner
-function changeBackground() {
-  let bannerList = document.getElementsByClassName("banner-image");
+const slider = document.querySelector(".banner-slider");
+const images = document.querySelectorAll(".banner-slider img");
+let currentIndex = 0;
 
-  if (indexBanner > bannerList.length - 1) {
-    // Reset indexBanner
-    indexBanner = 0;
-  }
-
-  // Looping to change background
-  for (let i = 0; i < bannerList.length; i++) {
-    bannerList[i].style.display = "none";
-  }
-
-  bannerList[indexBanner].style.display = "block";
+function autoSlide() {
+  currentIndex = (currentIndex + 1) % images.length;
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-setInterval(nextBanner, 3000);
+setInterval(autoSlide, 3000);

@@ -8,22 +8,24 @@ body {
   box-sizing: border-box;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 20px;
+  background-color: lightgrey;
 }
 
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: lavender;
+  background: black;
+  margin-top: 20px;
 }
 
 .logo-icon {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  background-image: url(https://picsum.photos/100);
+  background-image: url("https://picsum.photos/100");
   background-size: cover;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 nav {
@@ -32,7 +34,7 @@ nav {
 }
 
 #home-page {
-  background-color: aqua;
+  background-color: none;
   font-style: italic;
   font-family: system-ui;
   text-align: left;
@@ -63,66 +65,66 @@ nav {
 nav > a {
   border: 3px solid black;
   padding: 8px;
-  color: white;
+  color: black;
   text-decoration: none;
-  border-color: black;
+  border-color: white;
 }
 
-.banner-image {
-  height: 450px;
-  background-size: cover;
-  background-position: center;
-  margin: 30px 0 30px 0;
+.banner-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.banner-image-1 {
-  background-image: url(https://picsum.photos/500);
+.banner-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-.banner-image-2 {
-  background-image: url(https://picsum.photos/501);
+.banner-slider img {
+  width: 100%;
+  flex-shrink: 0;
 }
 
-.banner-image-3 {
-  background-image: url(https://picsum.photos/502);
-}
-
-.banner-image-4 {
-  background-image: url(https://picsum.photos/503);
-}
-
-.banner-image-5 {
-  background-image: url(https://picsum.photos/504);
+.banner-container {
+  overflow: hidden;
+  max-height: 500px;
 }
 
 .content {
   /* optional */
   height: 800px;
-  background: lightsteelblue;
+  background: cyan;
   margin-bottom: 30px;
 }
 
 #our-profile {
-  background-color: blue;
+  background-color: none;
   text-align: flex-start;
   padding-left: 5px;
+  margin-top: 30px;
+  border: 2px solid blue;
 }
 
 #portfolio {
-  background-color: green;
+  background-color: none;
   text-align: flex-start;
   padding-left: 5px;
+  border: 2px solid green;
 }
 
 #message-us {
-  background-color: purple;
+  background-color: none;
   text-align: flex-start;
   padding-left: 5px;
+  border: 2px solid purple;
 }
 
 form {
   width: 600px;
-  padding: 20px;
+  padding: 22px;
 }
 
 form div {
@@ -131,7 +133,7 @@ form div {
 
 textarea {
   width: 100%;
-  height: 100px;
+  height: 110px;
 }
 
 label {
@@ -139,9 +141,10 @@ label {
 }
 
 footer {
+  border: 1px solid black;
   text-align: center;
   background-color: darkblue;
-  color: white;
+  color: black;
 }
 
 footer p {
@@ -186,9 +189,8 @@ footer p {
     border-radius: 12px;
   }
 
-  .banner-image {
-    height: 300px;
-    margin: 15px 0 15px 0;
+  .banner-container {
+    max-height: 300px;
   }
 
   .content {
@@ -204,5 +206,10 @@ footer p {
     margin: 0;
     text-align: center;
     background-color: lightsalmon;
+  }
+
+  footer {
+    display: grid;
+    justify-content: normal;
   }
 }
