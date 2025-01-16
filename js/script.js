@@ -2,6 +2,7 @@
 
 console.log("Hello World!");
 
+// Function For Form Validation
 function formValidation() {
   let nameInput = document.getElementById("name-input").value;
 
@@ -18,24 +19,6 @@ function formValidation() {
   console.log(emailInput);
   if (emailInput == "") {
     alert("Email Wajib Diisi!");
-  }
-
-  let phoneInput = document.getElementById("phone-input").value;
-  console.log(phoneInput);
-  if (phoneInput == "") {
-    alert("Bagi Nomor HP-nya dong!");
-  }
-
-  let addressInput = document.getElementById("address-input").value;
-  console.log(addressInput);
-  if (addressInput == "") {
-    alert("Alamat Kamu Dimana?");
-  }
-
-  let ageInput = document.getElementById("age-input").value;
-  console.log(ageInput);
-  if (ageInput == "") {
-    alert("Berapa Umur Kamu?");
   }
 
   let messageInput = document.getElementById("message-input").value;

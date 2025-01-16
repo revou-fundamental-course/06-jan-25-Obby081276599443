@@ -34,7 +34,7 @@ nav {
 }
 
 #home-page {
-  background-color: none;
+  background-color: aliceblue;
   font-style: italic;
   font-family: system-ui;
   text-align: left;
@@ -63,7 +63,7 @@ nav {
 }
 
 nav > a {
-  border: 3px solid black;
+  border: 2px solid black;
   padding: 8px;
   color: black;
   text-decoration: none;
@@ -95,9 +95,18 @@ nav > a {
 
 .content {
   /* optional */
-  height: 800px;
+  height: 500px;
   background: cyan;
   margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+.content ul {
+  list-style-position: inside;
+}
+
+.content p {
+  padding-left: 20px;
 }
 
 #our-profile {
@@ -113,6 +122,60 @@ nav > a {
   text-align: flex-start;
   padding-left: 5px;
   border: 2px solid green;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 80px;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.grid img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.grid > article {
+  box-shadow: 10px 5px 5px 0 black;
+  border-radius: 30px;
+  text-align: center;
+  background: teal;
+  width: 300px;
+  transition: transform;
+}
+
+.grid > article img {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  /* width: 100%; */
+}
+
+.card {
+  /* text-transform: uppercase; */
+  /* cursor: progress; */
+  cursor: pointer;
+}
+
+.grid > article:hover {
+  /* transform: rotate(15deg); */
+  /* transform: scale(0.5); */ /* Zoom Out */
+  transform: scale(1.2);
+  /* transform: translate(50px); */ /* Geser */
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 #message-us {
@@ -152,8 +215,15 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
+  *,
+  html,
   body {
+    margin: 1px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
+    background-color: white;
   }
 
   .main-header {
@@ -194,7 +264,7 @@ footer p {
   }
 
   .content {
-    height: 400px;
+    height: 300px;
     margin-bottom: 15px;
   }
 
